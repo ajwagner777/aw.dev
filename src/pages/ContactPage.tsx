@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 function ContactPage() {
   useEffect(() => {
@@ -14,6 +15,14 @@ function ContactPage() {
           I am open to senior prompt engineering roles, AI technical advisory work, and
           focused product collaborations.
         </p>
+        <div className="hero-actions">
+          <Link to="/projects" className="btn btn-primary">
+            See my work
+          </Link>
+          <Link to="/experience" className="btn btn-ghost">
+            My Experience
+          </Link>
+        </div>
       </header>
 
       <div className="contact-grid">

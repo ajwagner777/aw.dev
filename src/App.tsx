@@ -13,9 +13,6 @@ function App() {
           <span className="brand-aw">AW</span><span className="brand-dev">.dev</span>
         </NavLink>
         <nav aria-label="Primary navigation" className="site-nav">
-          <NavLink to="/" end>
-            Home
-          </NavLink>
           <NavLink to="/experience">Experience</NavLink>
           <NavLink to="/projects">Projects</NavLink>
           <NavLink to="/contact">Contact</NavLink>

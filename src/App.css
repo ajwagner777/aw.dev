@@ -24,11 +24,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 42px;
-  padding: 0 0.85rem;
+  height: 53px;
+  padding: 0 1.06rem;
   border-radius: 6px;
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.25rem;
   text-decoration: none;
   color: #fff;
   background: linear-gradient(145deg, #3a9bd5, #1e65a8);
@@ -65,10 +65,10 @@
 
 .site-nav a.active {
   color: #fff;
-  background: linear-gradient(140deg, #3a9bd5, #1e65a8);
+  background: linear-gradient(140deg, #f2a14a, #d96b1d);
 }
 
-.site-nav a:hover {
+.site-nav a:not(.active):hover {
   color: var(--ink-body);
   background: rgba(255, 255, 255, 0.74);
   transform: translateY(-1px);

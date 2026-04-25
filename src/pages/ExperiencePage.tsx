@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const timeline = [
   {
@@ -59,6 +60,11 @@ function ExperiencePage() {
           Over two decades of building software — from writing my first lines of code in 2002
           to leading engineering orgs shipping products used by tens of thousands of people.
         </p>
+        <div className="hero-actions">
+          <Link to="/contact" className="btn btn-primary">
+            Work With Me
+          </Link>
+        </div>
       </header>
 
       <ol className="timeline">

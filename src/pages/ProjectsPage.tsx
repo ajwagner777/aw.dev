@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 type GitHubRepo = {
   id: number
@@ -115,6 +116,11 @@ function ProjectsPage() {
           A few projects that represent how I blend product outcomes with elegant,
           scalable technical delivery using Agentic AI and Prompt Engineering.
         </p>
+        <div className="hero-actions">
+          <Link to="/contact" className="btn btn-primary">
+            Work With Me
+          </Link>
+        </div>
       </header>
 
       <div className="project-row project-grid repo-row">

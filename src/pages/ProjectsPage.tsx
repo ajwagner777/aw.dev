@@ -46,6 +46,10 @@ function getDeviconUrl(language: string | null): string | null {
 }
 
 function ProjectsPage() {
+  useEffect(() => {
+    document.body.dataset.page = 'projects'
+    return () => { delete document.body.dataset.page }
+  }, [])
   const [repos, setRepos] = useState<GitHubRepo[]>([])
   const [isLoadingRepos, setIsLoadingRepos] = useState(true)
   const [hasAttemptedRepoLoad, setHasAttemptedRepoLoad] = useState(false)

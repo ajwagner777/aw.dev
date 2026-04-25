@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 const timeline = [
   {
     company: 'Zego',
@@ -44,6 +46,10 @@ const timeline = [
 ]
 
 function ExperiencePage() {
+  useEffect(() => {
+    document.body.dataset.page = 'experience'
+    return () => { delete document.body.dataset.page }
+  }, [])
   return (
     <section className="content-stack">
       <header className="content-header reveal reveal-1">

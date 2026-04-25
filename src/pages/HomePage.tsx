@@ -1,22 +1,25 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const skills = [
   'Product Strategy',
-  'TypeScript',
-  'React',
-  'Design Systems',
-  'Node.js',
+  'Language Agnostic',
+  'Frontend Web',
+  'Frontend Mobile',
+  'Backend API',
+  'Architecture',
   'Performance',
+  'Security',
 ]
 
 const highlights = [
   {
-    label: '8+',
+    label: '22+',
     detail: 'years crafting web products with design-forward teams',
   },
   {
-    label: '24',
-    detail: 'cross-functional launches spanning B2B and consumer apps',
+    label: '100\'s',
+    detail: 'cross-functional launches spanning multiple industries, audiences, and platforms',
   },
   {
     label: '99.95%',
@@ -25,6 +28,10 @@ const highlights = [
 ]
 
 function HomePage() {
+  useEffect(() => {
+    document.body.dataset.page = 'home'
+    return () => { delete document.body.dataset.page }
+  }, [])
   return (
     <>
       <section className="hero">
@@ -32,11 +39,11 @@ function HomePage() {
           <h1>
             Aaron Wagner
             <br />
-            Senior Software Engineer
+            Senior Prompt Engineer
           </h1>
           <p className="hero-summary">
-            I design and build resilient digital experiences where product clarity,
-            visual craft, and engineering rigor all matter equally.
+            I design and build resilient digital experiences using modern Agentic AI platforms
+            where product clarity, visual craft, and engineering rigor all matter equally.
           </p>
           <div className="hero-actions">
             <Link to="/contact" className="btn btn-primary">

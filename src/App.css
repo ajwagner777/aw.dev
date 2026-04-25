@@ -1,10 +1,11 @@
 .site-shell {
   width: min(1100px, calc(100% - 2rem));
   margin: 1.5rem auto;
-  border: 1px solid var(--line);
-  background: linear-gradient(170deg, rgba(254, 244, 230, 0.84), rgba(235, 243, 247, 0.82));
-  backdrop-filter: blur(8px);
-  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: linear-gradient(170deg, rgba(248, 252, 255, 0.18), rgba(220, 234, 244, 0.12));
+  -webkit-backdrop-filter: blur(3.375px) saturate(135%);
+  backdrop-filter: blur(3.375px) saturate(135%);
+  border-radius: 6px;
   box-shadow: var(--shadow-soft);
   overflow: hidden;
 }
@@ -14,8 +15,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.1rem 1.35rem;
-  border-bottom: 1px solid var(--line);
-  background: rgba(249, 248, 244, 0.88);
   position: sticky;
   top: 0;
   z-index: 20;
@@ -27,7 +26,7 @@
   justify-content: center;
   height: 42px;
   padding: 0 0.85rem;
-  border-radius: 12px;
+  border-radius: 6px;
   font-family: var(--font-display);
   font-size: 1rem;
   text-decoration: none;
@@ -55,23 +54,22 @@
 }
 
 .site-nav a {
-  color: var(--ink-muted);
+  color: #fff;
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 600;
   padding: 0.55rem 0.85rem;
-  border-radius: 999px;
+  border-radius: 0;
   transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .site-nav a.active {
-  color: var(--ink-strong);
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: inset 0 0 0 1px rgba(16, 58, 74, 0.14);
+  color: #fff;
+  background: linear-gradient(140deg, #3a9bd5, #1e65a8);
 }
 
 .site-nav a:hover {
-  color: var(--ink-strong);
+  color: var(--ink-body);
   background: rgba(255, 255, 255, 0.74);
   transform: translateY(-1px);
 }
@@ -82,12 +80,11 @@
 
 .site-footer {
   padding: 1.2rem 1.7rem 1.35rem;
-  border-top: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  color: var(--ink-muted);
+  color: #fff;
   font-size: 0.93rem;
 }
 
@@ -105,7 +102,7 @@
 .contact-card,
 .content-header {
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 6px;
   background: rgba(255, 255, 255, 0.72);
   box-shadow: var(--shadow-soft);
 }
@@ -172,7 +169,7 @@ h3 {
 .btn {
   text-decoration: none;
   padding: 0.68rem 1.04rem;
-  border-radius: 999px;
+  border-radius: 6px;
   font-weight: 700;
   font-size: 0.95rem;
   transition: transform 200ms ease, box-shadow 200ms ease;
@@ -201,7 +198,7 @@ h3 {
 .profile-photo {
   width: 100%;
   display: block;
-  border-radius: 10px;
+  border-radius: 6px;
   margin-bottom: 1.4rem;
   object-fit: cover;
   aspect-ratio: 4 / 3;
@@ -218,7 +215,7 @@ h3 {
 
 .hero-panel li {
   padding: 0.42rem 0.7rem;
-  border-radius: 999px;
+  border-radius: 6px;
   background: rgba(13, 101, 128, 0.12);
   color: #0c4f67;
   font-size: 0.84rem;
@@ -278,7 +275,7 @@ h3 {
   height: 12px;
   margin-top: 1.4rem;
   margin-left: 5px;
-  border-radius: 50%;
+  border-radius: 6px;
   background: linear-gradient(145deg, #e98d5f, #be5f39);
   box-shadow: 0 0 0 4px rgba(233, 141, 95, 0.22);
 }
@@ -339,7 +336,7 @@ h3 {
   justify-content: center;
   width: 4.95rem;
   height: 4.95rem;
-  border-radius: 0.9rem;
+  border-radius: 6px;
   flex-shrink: 0;
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(18, 55, 70, 0.15);
@@ -363,7 +360,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   padding: 0.2rem 0.55rem;
-  border-radius: 999px;
+  border-radius: 6px;
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -437,7 +434,7 @@ h3 {
 .loader-dots span {
   width: 0.5rem;
   height: 0.5rem;
-  border-radius: 50%;
+  border-radius: 6px;
   background: rgba(30, 101, 168, 0.65);
   animation: loader-pulse 1s ease-in-out infinite;
 }
@@ -534,7 +531,7 @@ h3 {
   .site-shell {
     width: min(1100px, calc(100% - 1rem));
     margin: 0.5rem auto;
-    border-radius: 18px;
+    border-radius: 6px;
   }
 
   .site-header {

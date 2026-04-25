@@ -28,10 +28,95 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(ellipse at 20% 0%, rgba(96, 183, 246, 0.55), transparent 55%),
-    radial-gradient(ellipse at 85% 100%, rgba(14, 76, 140, 0.55), transparent 55%),
-    linear-gradient(160deg, #3a9bd5, #1e65a8);
+    linear-gradient(160deg, rgba(58, 155, 213, 0.82), rgba(30, 101, 168, 0.88)),
+    center / cover no-repeat fixed;
+}
+
+/* ── Per-page texture backgrounds (JPEG fallback → WebP override) ── */
+
+/* JPEG fallbacks */
+body[data-page='home'] {
+  background-image: linear-gradient(160deg, rgba(58, 155, 213, 0.72), rgba(30, 101, 168, 0.84)), url('/images/texture-home-opt.jpg');
+}
+
+body[data-page='experience'] {
+  background-image: linear-gradient(160deg, rgba(30, 101, 168, 0.78), rgba(14, 56, 110, 0.88)), url('/images/texture-experience-opt.jpg');
+}
+
+body[data-page='projects'] {
+  background-image: linear-gradient(160deg, rgba(20, 90, 160, 0.76), rgba(58, 155, 213, 0.82)), url('/images/texture-projects-opt.jpg');
+}
+
+body[data-page='contact'] {
+  background-image: linear-gradient(160deg, rgba(14, 56, 110, 0.80), rgba(30, 101, 168, 0.85)), url('/images/texture-contact-opt.jpg');
+}
+
+body[data-page] {
+  background-size: auto, cover;
+  background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* WebP override (all modern browsers) */
+@supports (background-image: url('data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAUAmJZQCdAEO/gHOAAA=')) {
+  body[data-page='home'] {
+    background-image: linear-gradient(160deg, rgba(58, 155, 213, 0.72), rgba(30, 101, 168, 0.84)), url('/images/texture-home.webp');
+  }
+
+  body[data-page='experience'] {
+    background-image: linear-gradient(160deg, rgba(30, 101, 168, 0.78), rgba(14, 56, 110, 0.88)), url('/images/texture-experience.webp');
+  }
+
+  body[data-page='projects'] {
+    background-image: linear-gradient(160deg, rgba(20, 90, 160, 0.76), rgba(58, 155, 213, 0.82)), url('/images/texture-projects.webp');
+  }
+
+  body[data-page='contact'] {
+    background-image: linear-gradient(160deg, rgba(14, 56, 110, 0.80), rgba(30, 101, 168, 0.85)), url('/images/texture-contact.webp');
+  }
+}
+
+/* ── Mobile: smaller images (≤ 768px) ── */
+@media (max-width: 768px) {
+  body[data-page='home'] {
+    background-image: linear-gradient(160deg, rgba(58, 155, 213, 0.72), rgba(30, 101, 168, 0.84)), url('/images/texture-home-mobile-opt.jpg');
+  }
+
+  body[data-page='experience'] {
+    background-image: linear-gradient(160deg, rgba(30, 101, 168, 0.78), rgba(14, 56, 110, 0.88)), url('/images/texture-experience-mobile-opt.jpg');
+  }
+
+  body[data-page='projects'] {
+    background-image: linear-gradient(160deg, rgba(20, 90, 160, 0.76), rgba(58, 155, 213, 0.82)), url('/images/texture-projects-mobile-opt.jpg');
+  }
+
+  body[data-page='contact'] {
+    background-image: linear-gradient(160deg, rgba(14, 56, 110, 0.80), rgba(30, 101, 168, 0.85)), url('/images/texture-contact-mobile-opt.jpg');
+  }
+
+  body[data-page] {
+    background-attachment: scroll;
+    /* fixed causes blur/jank on iOS Safari */
+  }
+
+  @supports (background-image: url('data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAUAmJZQCdAEO/gHOAAA=')) {
+    body[data-page='home'] {
+      background-image: linear-gradient(160deg, rgba(58, 155, 213, 0.72), rgba(30, 101, 168, 0.84)), url('/images/texture-home-mobile.webp');
+    }
+
+    body[data-page='experience'] {
+      background-image: linear-gradient(160deg, rgba(30, 101, 168, 0.78), rgba(14, 56, 110, 0.88)), url('/images/texture-experience-mobile.webp');
+    }
+
+    body[data-page='projects'] {
+      background-image: linear-gradient(160deg, rgba(20, 90, 160, 0.76), rgba(58, 155, 213, 0.82)), url('/images/texture-projects-mobile.webp');
+    }
+
+    body[data-page='contact'] {
+      background-image: linear-gradient(160deg, rgba(14, 56, 110, 0.80), rgba(30, 101, 168, 0.85)), url('/images/texture-contact-mobile.webp');
+    }
+  }
 }
 
 #root {

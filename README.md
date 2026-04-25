@@ -1,5 +1,19 @@
 # React + TypeScript + Vite
 
+## Google Analytics (GA4)
+
+This project uses `react-ga4` to track pageviews and click events.
+
+Set your GA4 measurement ID in a local environment file:
+
+```bash
+VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+When the variable is present, the app sends:
+- Page view events on route changes
+- Global click events for links/buttons across the site
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
